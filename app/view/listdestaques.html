@@ -1,0 +1,22 @@
+
+    {% for nome in n  %}     
+    <ul>       
+        <div class="container noticia">           
+                <li>    
+                    <div class="conteudo">
+                        <div class="noticia-esquerda">
+                            <h1>{{ nome.noticia_titulo  }}</h1> 
+                            <img src="http://localhost/sistema/assets/img/{{nome.noticia_img}}"/>
+                            <span>{{nome.noticia_data}}</span>
+                        </div>
+                        <div class="noticias-direita">                            
+                            <span>{{nome.noticia_resumo}}</span>
+                            <a href="http://localhost/sistema/noticias/index/{{nome.noticia_id}}" >Saiba Mais</a>   
+                        </div>    
+                    </div>
+                </li>           
+        </div>  
+    </ul>  
+                      
+    {% endfor %} 
+{% include "includes/footer.html" %}

@@ -1,0 +1,41 @@
+<div class="container">
+    <form method="POST" action="http://localhost/sistema/cadastro/registrarusuarios" >
+        <div class="form-group">     
+          <label>Nome</label>
+          <input required type="text" name="name" class="form-control">          
+        </div>
+        <div class="form-group">
+            <label>E-mail</label>
+            <input required type="email" name="email" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label>CPF</label>
+            <input required  type="text" class="form-control"  name="cpf"/><br/>            
+          </div>
+          <div class="form-group">
+            <label>Endereço</label>
+            <input required type="text" name="end" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label>Cidade</label>
+            <input required type="text" name="cidade" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label>UF</label>
+            <input required type="text" name="uf" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input required type="passoword" name="senha" class="form-control"/>
+          </div>   
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select</label>
+            <select name="lvl"  class="form-control" id="exampleFormControlSelect1">
+              <option value="1">Administrador</option>
+              <option value="2">Usuário Comum</option>            
+            </select>
+          </div>  
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+      </form>
+</div>
+{% include "includes/footer.html" %}

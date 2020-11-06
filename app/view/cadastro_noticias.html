@@ -1,0 +1,23 @@
+
+
+        <form enctype="multipart/form-data" method="POST" action="http://localhost/sistema/cadastro/registrarnoticias" >
+           
+            <label>Título:</label>
+            <input required type="text"   name="titulo"/><br/>           
+            <label>Resumo:</label>
+            <input required  type="text" name="resumo"/><br/>
+            <label>Imagem:</label>
+            <input required  type="file"   name="img"/><br/>           
+            <label>Conteúdo:</label>
+            <input required  type="text" name="conteudo"/><br/>
+            <label>Tipo da Notícia:</label>
+            <select  name="tipo">
+                <option value="1">Destaque</option>
+                <option value="2">Geral</option>           
+            </select><br>
+            <button>Cadastrar</button>
+        </form>
+      
+    
+{% include "includes/footer.html" %}
+

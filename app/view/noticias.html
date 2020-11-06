@@ -1,0 +1,15 @@
+<div class="news">
+    {% for nome in n  %} 
+        <ul>
+            <div class="noticia-single">                            
+                <h1>{{ nome.noticia_titulo  }}</h1> 
+                <div class="img-data">
+                    <img src="http://localhost/sistema/assets/img/{{nome.noticia_img}}"/>  
+                    <span>{{nome.noticia_data}}</span>
+                </div>                        
+                <span>{{nome.noticia_conteudo}}</span>                      
+            </div>  
+        </ul>       
+    {% endfor %}        
+</div>
+{% include "includes/footer.html" %}

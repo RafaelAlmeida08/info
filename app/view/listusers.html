@@ -1,0 +1,26 @@
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for nome in n  %} 
+              <tr>
+                <th>{{ nome.user_id    }}</th>
+                <td>{{ nome.user_name  }}</td>
+                <td><a href="http://localhost/sistema/painel/editar/{{nome.user_id}}">Editar</a></td>
+                <td><a href="http://localhost/sistema/painel/excluir/{{nome.user_id}}">Excluir</a></td>
+              </tr>   
+              {% endfor %}          
+            </tbody>
+          </table>
+        <ul>
+            <li></li>
+            
+        </ul>       
+      
+  
+{% include "includes/footer.html" %}

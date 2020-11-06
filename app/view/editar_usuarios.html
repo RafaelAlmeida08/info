@@ -1,0 +1,34 @@
+<div class="container">
+    <h1 style="margin-bottom: 20px;">Editar Notícia</h1>
+    {% for nome in n  %} 
+    <form method="POST" action="http://localhost/sistema/painel/atualizarusuarios/{{nome.user_id}}">
+        <div class="form-group">
+            <input type="text" style="display: none" name="id" value="{{nome.user_id}}" /><br/>
+          <label>Nome</label>
+          <input required type="text" name="name" value="{{nome.user_name| raw | convert_encoding('UTF-8', 'ISO-8859-1')}}" class="form-control">          
+        </div>
+        <div class="form-group">          
+          <label>E-mail</label>
+          <input required type="email" name="email" value="{{nome.user_email }}" class="form-control">          
+        </div>        
+        <div class="form-group">           
+          <label>CPF</label>
+          <input required type="text" name="cpf" value="{{nome.user_cpf}}" class="form-control">          
+        </div>
+        <div class="form-group">           
+            <label>Endereço</label>
+            <input required type="text" name="end" value="{{nome.user_end}}" class="form-control">          
+          </div>
+          <div class="form-group">           
+            <label>Cidade</label>
+            <input required type="text" name="cidade" value="{{nome.user_cidade}}" class="form-control">          
+          </div>
+          <div class="form-group">           
+            <label>UF</label>
+            <input required type="text" name="uf" maxlength="2" value="{{nome.user_uf}}" class="form-control">          
+          </div>       
+        <button type="submit" class="btn btn-primary">Atualizar</button>
+      </form>
+      {% endfor %}
+</div>
+{% include "includes/footer.html" %}

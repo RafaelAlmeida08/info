@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sistema infonit</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://localhost/sistema/assets/css/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="box">
+                <h1>Página de Login</h1>
+                <form method="POST" action="http://localhost/sistema/login/entrar">
+                    <input type="email" placeholder="E-mail" name="email" id="email" />
+                    <input type="password" placeholder="Senha" name="password" id="password" />                    
+                    <button type="submit" >Entrar</button>
+                    {% if error != '' %}
+                    <span class="msg_error"><i class="fa fa-exclamation-triangle" style="color:#FF6D6D;"></i> <p>Tentativa Inválida</p></span>
+                    {% endif %}                    
+                </form>
+                    <!--<a href="http://localhost/sistema/cadastro/index" class="linka">Cadastre-se</a>-->
+            </div>
+        </div>
+        
+    </body>
+</html>
